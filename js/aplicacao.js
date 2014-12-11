@@ -7,9 +7,9 @@ function estatisticas(){
 			async: false
 		})
 		.done(function(statisticas) {
-			$('.last').html(statisticas['last']);
-			$('.high').html(statisticas['high']);
-			$('.low').html(statisticas['low']);
+			$('.last').html("R$"+statisticas['last']);
+			$('.high').html("R$"+statisticas['high']);
+			$('.low').html("R$"+statisticas['low']);
 			$('.vol').html(statisticas['vol']);
 			$('.preco-btc b').html(statisticas['buy'])
 		})
