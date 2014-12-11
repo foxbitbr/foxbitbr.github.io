@@ -1,0 +1,342 @@
+/*
+
+ _  _  _ _     _           _____              
+| || || | |   (_)_        (____ \             
+| || || | | _  _| |_  ____ _   \ \ ____ _   _ 
+| ||_|| | || \| |  _)/ _  ) |   | / _  ) | | |
+| |___| | | | | | |_( (/ /| |__/ ( (/ / \ V / 
+ \______|_| |_|_|\___)____)_____/ \____) \_/  
+                                              
+ === Uma agênçia digital que adora inovar ====
+
+        Nos visite, adoramos conversar :)
+
+              www.whitedev.com.br
+
+*/
+
+@import url('css/animate.css');
+
+/* FONTES*/
+@font-face{
+	font-family: "Axis";
+	src:url(fonts/axis.otf);
+}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+/* GLOBAIS */
+*{
+	box-sizing:border-box;
+	margin: 0; padding: 0;
+	outline: none !important;
+	text-decoration: none !important;
+	color: inherit;
+	font-family: "Open Sans", Arial;
+}
+*:focus,*:active{
+	outline: none;
+}
+
+
+@media (min-width: 728px){
+	.container-fluid > .row, .container-fluid, body, html{
+		height: 100%;
+	}
+}
+@media (max-width: 728px){
+	.container-fluid > .row, .container-fluid, body, html{
+		height: 700px;
+	}
+}
+header{
+	background: white;
+	z-index: 4;
+}
+.logo{
+	padding: 30px 0;
+
+}
+@media ( max-width: 700px) {
+	.logo{
+		text-align: center;
+		padding-bottom: 0;
+	}
+}
+nav.menu{
+	padding: 40px 0;
+}
+nav.menu ul{
+	margin:0; padding: 0;
+}
+nav.menu a{
+	display: inline-block;
+	font-size: 15px;
+	color: #2D3E50;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: "Axis",Arial, Tahoma;
+	display: inline-block;
+	letter-spacing: -1px;
+	z-index: 3;
+	position: relative;
+	transition:0.3s;
+}
+@media ( max-width: 700px) {
+	nav.menu{
+		text-align: center;
+	}
+}
+nav.menu a:hover{
+	opacity: 0.8;
+	transition:0.3s;
+}
+nav.menu a span::before{
+	color:#E8683E;
+	font-size: 15px;
+}
+nav.menu a[hide]{
+
+}
+/* corpo */
+section{
+	height: calc( 100% - (150px + 30px));
+	display: table;
+	position: relative;
+	overflow: hidden;
+	padding: 0 !important; margin:0; 
+	z-index: 3
+}
+section video{
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+}	
+section .containered{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	background: rgba(232,104,62,0.7);
+	z-index: 2;
+
+}
+section .containered .inner{
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+section .containered .inner h1{
+	font-family: "Axis";
+	text-transform: uppercase;
+}
+section .containered .inner  p{
+	font-family: "Open Sans";
+	padding: 0 20%;
+}
+section .containered .inner .divisor{
+	display: inline-block;
+	height: 1px;
+	width: 100px;
+	border-top: #2D3E50 solid 2px;
+	margin: 25px auto; 
+}
+.botoes{
+	display: inline-block;
+	position: relative;
+	height: 55px;
+	margin-top: 20px;
+}
+.botoes a,.preco-btc, .login-input{
+	border: 2px solid white;
+	padding: 15px 45px;
+	border-radius:50px;
+	text-transform: uppercase;
+	font-family: "Axis", Arial;
+	font-size: 15px;
+	transition:.3s;
+}
+.botoes a{ 
+	display: inline-block;
+	color: white;
+	cursor: pointer;
+}
+@media (max-width: 780px){
+	.botoes a{
+		margin-bottom: 10px;
+	}
+	.botoes{
+		
+	}
+	section .containered .inner  p{
+		padding: 0 20px;
+	}
+}
+.botoes a:hover,.login-input:nth-of-type(3):hover{
+	border-color:#2D3E50;
+	opacity: 1 !important;
+	transition:.3s;
+	transform:scale(0.95);
+}
+
+@media ( max-width: 700px) {
+	
+}
+.login-btn{	left: -140px; }
+.cadastro-btn{ right: -180px; }
+
+
+/* rodapé */
+footer{
+	background: #ECF0F1;
+	border-top: 5px #E8683E solid;
+	z-index: 4;
+
+}
+.estatisticas{
+	padding: 24px 0;
+	font-size: 12px;
+	font-family: "Axis";
+	color: #E8683E;
+}
+.estatisticas b{
+	color: #2D3E50;
+}
+@media ( max-width: 700px) {
+	.estatisticas{
+		text-align: center;
+	}
+}
+.cotacao {
+	padding: 10px 0;
+	z-index: 5;
+	text-align: center;
+}
+.cotacao .preco-btc{
+	border-color: #2D3E50;
+	padding:10px; 
+	color: #E8683E;
+}
+
+/* login form */
+.login-form{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+
+	background: white;
+	z-index: 9;
+}
+.login-form .btns{
+	width: 300px;
+	padding: 30px;
+	display: table-cell;
+	vertical-align: middle;
+	margin:0 auto;
+	text-align: center;
+}
+.login-form .btns h3{
+	font-family: "Axis", Arial;
+}
+.login-form .btns input{
+	color: #E8683E;
+	border-color: #E8683E;
+}
+.login-form .back *{
+	color: #E8683E;
+}
+
+.tooltip{
+	z-index: 99999999;
+}
+
+
+/* pagina estatica */
+.pagina section{ /* ajuste pra pagina estatica*/
+	height: auto !important;
+}
+@media (min-width: 780px){
+	.pagina footer{ /* ajuste pra pagina estatica*/
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		box-shadow: 0 10px 10px 8px #000;
+	}
+}
+
+.pagina article{
+	font-family: "Open Sans", Arial;
+	padding: 50px 0;
+	padding-bottom: 150px;
+	font-size: 15px;
+}
+.pagina article h1,.pagina article h2,.pagina article h3{
+	font-family: "Axis", Arial;
+}
+
+
+/* modificacoes do bootstrap */
+input,button{
+	border: 2px solid #E8683E !important;
+	height: auto !important;
+	padding: 15px 25px !important;
+	border-radius:50px !important ;
+	text-transform: uppercase !important;
+	font-family: "Axis", Arial !important;
+	font-size: 15px !important;
+	transition:.3s !important;
+}
+input:focus,button:focus{
+	-webkit-transform:scale(0.99);
+	-moz-transform:scale(0.99);
+	-ms-transform:scale(0.99);
+	transform:scale(0.99);
+	-webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	-ms-transition:0.3s;
+	transition:0.3s;
+
+	box-shadow: none !important;
+
+}
+input[type='file']{
+	border:none !important;
+}
+.table-bordered{
+	border-color:  #E8683E;
+	border-width: 2px;
+	overflow:hidden;
+	border-radius: 15px;
+	border-collapse:separate;
+}
+.table-bordered tbody{
+	padding: 5px;
+}
+.table-bordered tr td{
+	border-width: 3px;
+}
+@media (max-width: 780px){
+	.table{
+		font-size: 7px;
+		letter-spacing: -0.5px;
+	}
+}
+.table-bordered *[rowspan], .table-bordered *[colspan]{
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bolder;
+	color: #E8683E;
+	text-transform: uppercase;
+	font-family: "Axis", Arial;
+}
+nav .popover-content {
+	padding: 15px !important;
+	
+}
+nav .popover {
+	width: 400px;
+}
