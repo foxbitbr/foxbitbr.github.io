@@ -1,7 +1,7 @@
 function estatisticas(){
 		var statisticas ='';
 		$.ajax({
-			url: 'https://api.testnet.blinktrade.com/api/v1/BRL/ticker',
+			url: 'https://api.blinktrade.com/api/v1/BRL/ticker',
 			dataType: 'jsonp',
 			data: {crypto_currency: 'BTC'},
 			async: false
