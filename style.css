@@ -120,7 +120,7 @@ section .containered{
 	vertical-align: middle;
 	background: rgba(232,104,62,0.7);
 	z-index: 2;
-
+	width: 100%;
 }
 section .containered .inner{
 	padding: 20px;
